@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyAwesomeCompany — HR портал</title>
-  <meta name="description" content="HR-портал компании MyAwesomeCompany: вакансии, преимущества, проекты, корпоративная культура и форма обратной связи." />
+  <meta name="description"
+    content="HR-портал компании MyAwesomeCompany: вакансии, преимущества, проекты, корпоративная культура и форма обратной связи." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
   <style>
-    :root, [data-theme="light"] {
+    :root,
+    [data-theme="light"] {
       --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
       --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
       --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
@@ -70,13 +73,19 @@
       --color-primary: #73b6b2;
       --color-primary-hover: #8dc8c4;
       --color-primary-highlight: #24403f;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.25);
-      --shadow-md: 0 8px 28px rgba(0,0,0,0.3);
-      --shadow-lg: 0 18px 48px rgba(0,0,0,0.35);
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
+      --shadow-md: 0 8px 28px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.35);
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -85,15 +94,40 @@
       line-height: 1.65;
       color: var(--color-text);
       background:
-        radial-gradient(circle at top right, rgba(13,110,110,0.08), transparent 24%),
+        radial-gradient(circle at top right, rgba(13, 110, 110, 0.08), transparent 24%),
         linear-gradient(180deg, var(--color-bg) 0%, #fcfbf8 100%);
     }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    button, input, textarea { font: inherit; }
-    button { cursor: pointer; border: 0; }
-    .container { width: min(calc(100% - 2rem), var(--content-default)); margin: 0 auto; }
-    .section { padding: clamp(var(--space-12), 8vw, var(--space-24)) 0; }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--content-default));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: clamp(var(--space-12), 8vw, var(--space-24)) 0;
+    }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -107,13 +141,19 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
+
     .section-title {
       margin: var(--space-4) 0 var(--space-3);
       font-family: var(--font-display);
       font-size: var(--text-xl);
       line-height: 1.15;
     }
-    .section-subtitle { margin: 0; max-width: 62ch; color: var(--color-text-muted); }
+
+    .section-subtitle {
+      margin: 0;
+      max-width: 62ch;
+      color: var(--color-text-muted);
+    }
 
     .skip-link {
       position: absolute;
@@ -125,7 +165,10 @@
       color: var(--color-text-inverse);
       z-index: 999;
     }
-    .skip-link:focus { top: 1rem; }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
 
     header {
       position: sticky;
@@ -135,6 +178,7 @@
       background: color-mix(in srgb, var(--color-bg) 86%, transparent);
       border-bottom: 1px solid color-mix(in srgb, var(--color-border) 75%, transparent);
     }
+
     .nav {
       display: flex;
       align-items: center;
@@ -142,12 +186,14 @@
       gap: var(--space-4);
       min-height: 4.75rem;
     }
+
     .brand {
       display: inline-flex;
       align-items: center;
       gap: 0.9rem;
       font-weight: 800;
     }
+
     .brand-mark {
       width: 2.7rem;
       height: 2.7rem;
@@ -157,7 +203,12 @@
       color: white;
       box-shadow: var(--shadow-sm);
     }
-    .brand-mark svg { width: 100%; height: 100%; }
+
+    .brand-mark svg {
+      width: 100%;
+      height: 100%;
+    }
+
     .nav-links {
       display: flex;
       align-items: center;
@@ -165,17 +216,21 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+
     .nav-links a {
       padding: 0.4rem 0.2rem;
       font-size: var(--text-sm);
       color: var(--color-text-muted);
     }
+
     .nav-actions {
       display: flex;
       align-items: center;
       gap: 0.75rem;
     }
-    .theme-toggle, .menu-toggle {
+
+    .theme-toggle,
+    .menu-toggle {
       width: 2.85rem;
       height: 2.85rem;
       display: inline-grid;
@@ -186,7 +241,10 @@
       box-shadow: var(--shadow-sm);
       color: var(--color-text);
     }
-    .menu-toggle { display: none; }
+
+    .menu-toggle {
+      display: none;
+    }
 
     .btn {
       display: inline-flex;
@@ -200,13 +258,21 @@
       font-size: var(--text-sm);
       font-weight: 700;
     }
-    .btn:hover { transform: translateY(-1px); }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
     .btn-primary {
       background: var(--color-primary);
       color: var(--color-text-inverse);
       box-shadow: var(--shadow-sm);
     }
-    .btn-primary:hover { background: var(--color-primary-hover); }
+
+    .btn-primary:hover {
+      background: var(--color-primary-hover);
+    }
+
     .btn-secondary {
       border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
       background: var(--color-surface);
@@ -216,12 +282,14 @@
     .hero {
       padding: clamp(var(--space-12), 9vw, var(--space-24)) 0 var(--space-16);
     }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: clamp(var(--space-8), 5vw, var(--space-16));
       align-items: center;
     }
+
     .hero-copy h1 {
       margin: var(--space-4) 0 var(--space-4);
       font-family: var(--font-display);
@@ -230,22 +298,26 @@
       letter-spacing: -0.04em;
       max-width: 12ch;
     }
+
     .hero-copy p {
       margin: 0 0 var(--space-8);
       max-width: 58ch;
       color: var(--color-text-muted);
     }
+
     .hero-actions {
       display: flex;
       gap: 0.85rem;
       flex-wrap: wrap;
       margin-bottom: var(--space-8);
     }
+
     .hero-stats {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: var(--space-4);
     }
+
     .stat {
       padding: var(--space-5);
       border-radius: var(--radius-lg);
@@ -253,13 +325,18 @@
       border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
       box-shadow: var(--shadow-sm);
     }
+
     .stat strong {
       display: block;
       font-size: var(--text-lg);
       line-height: 1.1;
       margin-bottom: 0.2rem;
     }
-    .stat span { color: var(--color-text-muted); font-size: var(--text-sm); }
+
+    .stat span {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
 
     .hero-panel {
       position: relative;
@@ -270,15 +347,17 @@
       box-shadow: var(--shadow-lg);
       overflow: hidden;
     }
+
     .hero-panel::before {
       content: "";
       position: absolute;
       inset: auto -10% -20% auto;
       width: 15rem;
       height: 15rem;
-      background: radial-gradient(circle, rgba(13,110,110,0.18), transparent 70%);
+      background: radial-gradient(circle, rgba(13, 110, 110, 0.18), transparent 70%);
       border-radius: 50%;
     }
+
     .panel-card {
       position: relative;
       padding: var(--space-5);
@@ -287,9 +366,24 @@
       border: 1px solid color-mix(in srgb, var(--color-border) 72%, transparent);
       box-shadow: var(--shadow-md);
     }
-    .panel-card + .panel-card { margin-top: var(--space-4); }
-    .mini-label { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-faint); }
-    .vacancy-list { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
+
+    .panel-card+.panel-card {
+      margin-top: var(--space-4);
+    }
+
+    .mini-label {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-faint);
+    }
+
+    .vacancy-list {
+      display: grid;
+      gap: var(--space-3);
+      margin-top: var(--space-4);
+    }
+
     .vacancy-item {
       display: flex;
       justify-content: space-between;
@@ -299,7 +393,12 @@
       background: var(--color-surface-2);
       border: 1px solid color-mix(in srgb, var(--color-border) 72%, transparent);
     }
-    .vacancy-item strong { display: block; margin-bottom: 0.2rem; }
+
+    .vacancy-item strong {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
     .tag {
       display: inline-flex;
       align-items: center;
@@ -313,12 +412,19 @@
       height: fit-content;
     }
 
-    .grid-3, .grid-4 {
+    .grid-3,
+    .grid-4 {
       display: grid;
       gap: var(--space-5);
     }
-    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 
     .card {
       padding: var(--space-6);
@@ -327,8 +433,17 @@
       border: 1px solid color-mix(in srgb, var(--color-border) 72%, transparent);
       box-shadow: var(--shadow-sm);
     }
-    .card h3 { margin: var(--space-4) 0 var(--space-2); font-size: var(--text-lg); }
-    .card p { margin: 0; color: var(--color-text-muted); }
+
+    .card h3 {
+      margin: var(--space-4) 0 var(--space-2);
+      font-size: var(--text-lg);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--color-text-muted);
+    }
+
     .icon-chip {
       width: 3rem;
       height: 3rem;
@@ -338,7 +453,11 @@
       background: color-mix(in srgb, var(--color-primary-highlight) 72%, var(--color-surface));
       color: var(--color-primary);
     }
-    .icon-chip svg { width: 1.4rem; height: 1.4rem; }
+
+    .icon-chip svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
 
     .steps {
       display: grid;
@@ -346,6 +465,7 @@
       gap: var(--space-4);
       margin-top: var(--space-8);
     }
+
     .step {
       position: relative;
       padding: var(--space-5);
@@ -353,6 +473,7 @@
       background: var(--color-surface);
       border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
     }
+
     .step-index {
       display: inline-grid;
       place-items: center;
@@ -373,6 +494,7 @@
       align-items: stretch;
       margin-top: var(--space-8);
     }
+
     .quote-box {
       height: 100%;
       padding: clamp(var(--space-6), 4vw, var(--space-10));
@@ -381,17 +503,23 @@
       color: var(--color-text-inverse);
       box-shadow: var(--shadow-lg);
     }
+
     .quote-box p {
       margin: var(--space-4) 0 var(--space-6);
       font-size: clamp(1.2rem, 1rem + 1vw, 1.8rem);
       line-height: 1.35;
       max-width: 22ch;
     }
-    .quote-box small { color: rgba(255,255,255,0.82); }
+
+    .quote-box small {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
     .culture-list {
       display: grid;
       gap: var(--space-4);
     }
+
     .culture-item {
       padding: var(--space-5);
       border-radius: var(--radius-xl);
@@ -399,8 +527,16 @@
       border: 1px solid color-mix(in srgb, var(--color-border) 72%, transparent);
       box-shadow: var(--shadow-sm);
     }
-    .culture-item h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
-    .culture-item p { margin: 0; color: var(--color-text-muted); }
+
+    .culture-item h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.05rem;
+    }
+
+    .culture-item p {
+      margin: 0;
+      color: var(--color-text-muted);
+    }
 
     .gallery {
       display: grid;
@@ -408,6 +544,7 @@
       gap: var(--space-4);
       margin-top: var(--space-8);
     }
+
     .gallery-card {
       position: relative;
       min-height: 16rem;
@@ -420,19 +557,41 @@
       align-items: end;
       isolation: isolate;
     }
+
     .gallery-card::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(9,18,23,0.02), rgba(9,18,23,0.7));
+      background: linear-gradient(180deg, rgba(9, 18, 23, 0.02), rgba(9, 18, 23, 0.7));
       z-index: -1;
     }
-    .gallery-card.large { min-height: 24rem; }
-    .gallery-a { background: linear-gradient(135deg, #2b6f77, #0f2d40); }
-    .gallery-b { background: linear-gradient(135deg, #7d6850, #3a2f25); }
-    .gallery-c { background: linear-gradient(135deg, #6a8f55, #294033); }
-    .gallery-content h3 { margin: 0 0 0.35rem; font-size: 1.15rem; }
-    .gallery-content p { margin: 0; color: rgba(255,255,255,0.85); max-width: 24ch; }
+
+    .gallery-card.large {
+      min-height: 24rem;
+    }
+
+    .gallery-a {
+      background: linear-gradient(135deg, #2b6f77, #0f2d40);
+    }
+
+    .gallery-b {
+      background: linear-gradient(135deg, #7d6850, #3a2f25);
+    }
+
+    .gallery-c {
+      background: linear-gradient(135deg, #6a8f55, #294033);
+    }
+
+    .gallery-content h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.15rem;
+    }
+
+    .gallery-content p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 24ch;
+    }
 
     .openings {
       display: grid;
@@ -440,6 +599,7 @@
       gap: var(--space-5);
       margin-top: var(--space-8);
     }
+
     .opening-card {
       padding: var(--space-6);
       border-radius: var(--radius-xl);
@@ -447,12 +607,14 @@
       border: 1px solid color-mix(in srgb, var(--color-border) 74%, transparent);
       box-shadow: var(--shadow-sm);
     }
+
     .opening-meta {
       display: flex;
       gap: 0.6rem;
       flex-wrap: wrap;
       margin: var(--space-4) 0;
     }
+
     .pill {
       display: inline-flex;
       align-items: center;
@@ -463,7 +625,10 @@
       color: var(--color-text-muted);
       font-weight: 700;
     }
-    .opening-card p { color: var(--color-text-muted); }
+
+    .opening-card p {
+      color: var(--color-text-muted);
+    }
 
     .contact-wrap {
       display: grid;
@@ -472,20 +637,52 @@
       align-items: start;
       margin-top: var(--space-8);
     }
-    .contact-info, .contact-form {
+
+    .contact-info,
+    .contact-form {
       padding: clamp(var(--space-6), 4vw, var(--space-10));
       border-radius: 2rem;
       background: var(--color-surface);
       border: 1px solid color-mix(in srgb, var(--color-border) 74%, transparent);
       box-shadow: var(--shadow-md);
     }
-    .info-list { display: grid; gap: var(--space-4); margin-top: var(--space-6); }
-    .info-item strong { display: block; margin-bottom: 0.2rem; }
-    .info-item span { color: var(--color-text-muted); }
-    form { display: grid; gap: var(--space-4); }
-    .field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
-    label { display: grid; gap: 0.5rem; font-size: var(--text-sm); font-weight: 700; }
-    input, textarea, select {
+
+    .info-list {
+      display: grid;
+      gap: var(--space-4);
+      margin-top: var(--space-6);
+    }
+
+    .info-item strong {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-item span {
+      color: var(--color-text-muted);
+    }
+
+    form {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-4);
+    }
+
+    label {
+      display: grid;
+      gap: 0.5rem;
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    input,
+    textarea,
+    select {
       width: 100%;
       border: 1px solid color-mix(in srgb, var(--color-border) 82%, transparent);
       border-radius: 1rem;
@@ -496,13 +693,26 @@
       outline: none;
       transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
     }
-    textarea { min-height: 8.5rem; resize: vertical; }
-    input:focus, textarea:focus, select:focus {
+
+    textarea {
+      min-height: 8.5rem;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
       border-color: var(--color-primary);
       box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-primary) 14%, transparent);
       background: var(--color-surface);
     }
-    .form-note { color: var(--color-text-muted); font-size: var(--text-sm); margin: 0; }
+
+    .form-note {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      margin: 0;
+    }
+
     .success-message {
       display: none;
       padding: var(--space-4);
@@ -511,12 +721,16 @@
       color: var(--color-success);
       font-weight: 700;
     }
-    .success-message.show { display: block; }
+
+    .success-message.show {
+      display: block;
+    }
 
     footer {
       padding: var(--space-8) 0 var(--space-10);
       color: var(--color-text-muted);
     }
+
     .footer-line {
       display: flex;
       justify-content: space-between;
@@ -531,12 +745,14 @@
       transform: translateY(18px);
       transition: opacity 600ms ease, transform 600ms ease;
     }
+
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
     @media (max-width: 980px) {
+
       .hero-grid,
       .culture-layout,
       .contact-wrap,
@@ -547,16 +763,32 @@
       .gallery {
         grid-template-columns: 1fr 1fr;
       }
+
       .hero-grid,
       .culture-layout,
-      .contact-wrap { grid-template-columns: 1fr; }
-      .gallery .large { grid-column: 1 / -1; }
-      .field-grid { grid-template-columns: 1fr; }
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery .large {
+        grid-column: 1 / -1;
+      }
+
+      .field-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 760px) {
-      .nav { min-height: 4.25rem; align-items: center; }
-      .menu-toggle { display: inline-grid; }
+      .nav {
+        min-height: 4.25rem;
+        align-items: center;
+      }
+
+      .menu-toggle {
+        display: inline-grid;
+      }
+
       .nav-links {
         display: none;
         position: absolute;
@@ -571,9 +803,20 @@
         border: 1px solid color-mix(in srgb, var(--color-border) 78%, transparent);
         box-shadow: var(--shadow-md);
       }
-      .nav-links.open { display: flex; }
-      .nav-links a { width: 100%; padding: 0.5rem 0; }
-      .nav-actions .btn { display: none; }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 0.5rem 0;
+      }
+
+      .nav-actions .btn {
+        display: none;
+      }
+
       .hero-stats,
       .grid-4,
       .grid-3,
@@ -582,22 +825,38 @@
       .gallery {
         grid-template-columns: 1fr;
       }
-      .hero-copy h1 { max-width: 10ch; }
-      .container { width: min(calc(100% - 1.25rem), var(--content-default)); }
+
+      .hero-copy h1 {
+        max-width: 10ch;
+      }
+
+      .container {
+        width: min(calc(100% - 1.25rem), var(--content-default));
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
       }
-      .reveal { opacity: 1; transform: none; }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
     }
   </style>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Перейти к содержанию</a>
   <header>
@@ -605,7 +864,8 @@
       <a class="brand" href="#top" aria-label="MyAwesomeCompany">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 17V7l4.5 5L12 7l3.5 5L20 7v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 17V7l4.5 5L12 7l3.5 5L20 7v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </span>
         <span>MyAwesomeCompany</span>
@@ -621,11 +881,16 @@
       </nav>
       <div class="nav-actions">
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Сменить тему">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
         <a class="btn btn-primary" href="#contact">Откликнуться</a>
-        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-links">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"
+          aria-controls="nav-links">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
         </button>
       </div>
     </div>
@@ -637,7 +902,9 @@
         <div class="hero-copy reveal">
           <span class="eyebrow">HR портал компании</span>
           <h1>Работа, где сильная команда и понятный рост идут вместе.</h1>
-          <p>MyAwesomeCompany — это современная компания, в которой ценят инициативу, поддерживают развитие сотрудников и создают проекты, которыми можно гордиться. На портале собрана ключевая информация о культуре, преимуществах, вакансиях и возможностях карьерного роста.</p>
+          <p>MyAwesomeCompany — это современная компания, в которой ценят инициативу, поддерживают развитие сотрудников
+            и создают проекты, которыми можно гордиться. На портале собрана ключевая информация о культуре,
+            преимуществах, вакансиях и возможностях карьерного роста.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#jobs">Смотреть вакансии</a>
             <a class="btn btn-secondary" href="#about">Узнать о компании</a>
@@ -686,8 +953,10 @@
           </div>
           <div class="panel-card">
             <span class="mini-label">Почему выбирают нас</span>
-            <h2 style="margin: 0.65rem 0 0.5rem; font-size: 1.3rem;">Прозрачные цели, реальные задачи и уважение к балансу.</h2>
-            <p style="margin: 0; color: var(--color-text-muted);">Сотрудники получают поддержку наставников, понятный карьерный трек и проекты с заметным результатом для бизнеса.</p>
+            <h2 style="margin: 0.65rem 0 0.5rem; font-size: 1.3rem;">Прозрачные цели, реальные задачи и уважение к
+              балансу.</h2>
+            <p style="margin: 0; color: var(--color-text-muted);">Сотрудники получают поддержку наставников, понятный
+              карьерный трек и проекты с заметным результатом для бизнеса.</p>
           </div>
         </div>
       </div>
@@ -696,36 +965,55 @@
     <section class="section" id="about">
       <div class="container">
         <span class="eyebrow reveal">О компании</span>
-        <h2 class="section-title reveal">HR-портал для кандидатов, которые ищут не просто работу, а среду для роста.</h2>
-        <p class="section-subtitle reveal">На этой странице собраны основные сведения о компании, карьерных возможностях, принципах работы, корпоративной культуре и текущих вакансиях. Такой формат помогает кандидату быстро познакомиться с работодателем и сразу отправить заявку.</p>
+        <h2 class="section-title reveal">HR-портал для кандидатов, которые ищут не просто работу, а среду для роста.
+        </h2>
+        <p class="section-subtitle reveal">На этой странице собраны основные сведения о компании, карьерных
+          возможностях, принципах работы, корпоративной культуре и текущих вакансиях. Такой формат помогает кандидату
+          быстро познакомиться с работодателем и сразу отправить заявку.</p>
         <div class="grid-4" style="margin-top: 2rem;">
           <article class="card reveal">
             <div class="icon-chip" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18"></path></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 3v18M3 12h18"></path>
+              </svg>
             </div>
             <h3>Понятная миссия</h3>
-            <p>Компания развивает цифровые продукты и внутренние сервисы, которые упрощают рабочие процессы и улучшают пользовательский опыт.</p>
+            <p>Компания развивает цифровые продукты и внутренние сервисы, которые упрощают рабочие процессы и улучшают
+              пользовательский опыт.</p>
           </article>
           <article class="card reveal">
             <div class="icon-chip" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="9"></circle></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 6v6l4 2"></path>
+                <circle cx="12" cy="12" r="9"></circle>
+              </svg>
             </div>
             <h3>Гибкий формат</h3>
-            <p>Часть команд работает удаленно, часть — гибридно. Это позволяет сохранять продуктивность и комфортный ритм работы.</p>
+            <p>Часть команд работает удаленно, часть — гибридно. Это позволяет сохранять продуктивность и комфортный
+              ритм работы.</p>
           </article>
           <article class="card reveal">
             <div class="icon-chip" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16"></path><path d="M6 15l3-3 3 2 6-6"></path></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19h16"></path>
+                <path d="M6 15l3-3 3 2 6-6"></path>
+              </svg>
             </div>
             <h3>Измеримый результат</h3>
-            <p>Каждый проект имеет понятные цели, сроки и метрики, а сотрудники видят вклад своей работы в итоговый продукт.</p>
+            <p>Каждый проект имеет понятные цели, сроки и метрики, а сотрудники видят вклад своей работы в итоговый
+              продукт.</p>
           </article>
           <article class="card reveal">
             <div class="icon-chip" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10h10"></path><path d="M12 5v14"></path><circle cx="12" cy="12" r="9"></circle></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 10h10"></path>
+                <path d="M12 5v14"></path>
+                <circle cx="12" cy="12" r="9"></circle>
+              </svg>
             </div>
             <h3>Культура поддержки</h3>
-            <p>В компании поощряется обмен знаниями, участие в обсуждениях и развитие soft и hard skills через внутренние активности.</p>
+            <p>В компании поощряется обмен знаниями, участие в обсуждениях и развитие soft и hard skills через
+              внутренние активности.</p>
           </article>
         </div>
       </div>
@@ -735,14 +1023,37 @@
       <div class="container">
         <span class="eyebrow reveal">Преимущества</span>
         <h2 class="section-title reveal">Что получает сотрудник в MyAwesomeCompany</h2>
-        <p class="section-subtitle reveal">Раздел показывает преимущества работодателя и отвечает на частый вопрос кандидатов: почему стоит выбрать именно эту компанию.</p>
+        <p class="section-subtitle reveal">Раздел показывает преимущества работодателя и отвечает на частый вопрос
+          кандидатов: почему стоит выбрать именно эту компанию.</p>
         <div class="grid-3" style="margin-top: 2rem;">
-          <article class="card reveal"><h3>Адаптация с наставником</h3><p>Новый сотрудник проходит мягкое онбординг-сопровождение, знакомится с командой, процессами и инструментами без лишнего стресса.</p></article>
-          <article class="card reveal"><h3>Обучение и развитие</h3><p>Компания компенсирует профессиональные курсы, внутренние митапы и участие в профильных мероприятиях.</p></article>
-          <article class="card reveal"><h3>Прозрачный рост</h3><p>Карьерные ожидания обсуждаются заранее: сотрудник понимает, какие навыки нужны для перехода на следующий уровень.</p></article>
-          <article class="card reveal"><h3>Забота о балансе</h3><p>Поддерживается разумная нагрузка, гибкий график и уважение к личному времени каждого специалиста.</p></article>
-          <article class="card reveal"><h3>Интересные задачи</h3><p>Команды работают не над шаблонными задачами, а над проектами, которые влияют на реальные бизнес-процессы.</p></article>
-          <article class="card reveal"><h3>Комфортная среда</h3><p>Внутри компании приветствуются открытая коммуникация, обратная связь, инициативность и ответственность.</p></article>
+          <article class="card reveal">
+            <h3>Адаптация с наставником</h3>
+            <p>Новый сотрудник проходит мягкое онбординг-сопровождение, знакомится с командой, процессами и
+              инструментами без лишнего стресса.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Обучение и развитие</h3>
+            <p>Компания компенсирует профессиональные курсы, внутренние митапы и участие в профильных мероприятиях.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Прозрачный рост</h3>
+            <p>Карьерные ожидания обсуждаются заранее: сотрудник понимает, какие навыки нужны для перехода на следующий
+              уровень.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Забота о балансе</h3>
+            <p>Поддерживается разумная нагрузка, гибкий график и уважение к личному времени каждого специалиста.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Интересные задачи</h3>
+            <p>Команды работают не над шаблонными задачами, а над проектами, которые влияют на реальные бизнес-процессы.
+            </p>
+          </article>
+          <article class="card reveal">
+            <h3>Комфортная среда</h3>
+            <p>Внутри компании приветствуются открытая коммуникация, обратная связь, инициативность и ответственность.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -751,12 +1062,25 @@
       <div class="container">
         <span class="eyebrow reveal">Процесс отбора</span>
         <h2 class="section-title reveal">Как устроен путь кандидата</h2>
-        <p class="section-subtitle reveal">Раздел помогает соискателю заранее понять этапы взаимодействия и чувствовать себя увереннее при отклике.</p>
+        <p class="section-subtitle reveal">Раздел помогает соискателю заранее понять этапы взаимодействия и чувствовать
+          себя увереннее при отклике.</p>
         <div class="steps">
-          <article class="step reveal"><span class="step-index">01</span><h3>Отклик</h3><p>Кандидат оставляет заявку через форму на сайте и прикладывает свои контактные данные.</p></article>
-          <article class="step reveal"><span class="step-index">02</span><h3>Первичный контакт</h3><p>HR связывается с кандидатом, уточняет опыт, мотивацию и формат взаимодействия.</p></article>
-          <article class="step reveal"><span class="step-index">03</span><h3>Интервью</h3><p>Проводится встреча с командой или руководителем направления для оценки компетенций.</p></article>
-          <article class="step reveal"><span class="step-index">04</span><h3>Оффер</h3><p>После успешного прохождения этапов кандидат получает предложение о работе и план адаптации.</p></article>
+          <article class="step reveal"><span class="step-index">01</span>
+            <h3>Отклик</h3>
+            <p>Кандидат оставляет заявку через форму на сайте и прикладывает свои контактные данные.</p>
+          </article>
+          <article class="step reveal"><span class="step-index">02</span>
+            <h3>Первичный контакт</h3>
+            <p>HR связывается с кандидатом, уточняет опыт, мотивацию и формат взаимодействия.</p>
+          </article>
+          <article class="step reveal"><span class="step-index">03</span>
+            <h3>Интервью</h3>
+            <p>Проводится встреча с командой или руководителем направления для оценки компетенций.</p>
+          </article>
+          <article class="step reveal"><span class="step-index">04</span>
+            <h3>Оффер</h3>
+            <p>После успешного прохождения этапов кандидат получает предложение о работе и план адаптации.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -765,17 +1089,31 @@
       <div class="container">
         <span class="eyebrow reveal">Корпоративная культура</span>
         <h2 class="section-title reveal">Люди, доверие и обмен знаниями — основа работы команды</h2>
-        <p class="section-subtitle reveal">На HR-портале важно показать не только вакансии, но и внутреннюю атмосферу компании: именно это часто влияет на решение кандидата.</p>
+        <p class="section-subtitle reveal">На HR-портале важно показать не только вакансии, но и внутреннюю атмосферу
+          компании: именно это часто влияет на решение кандидата.</p>
         <div class="culture-layout">
           <aside class="quote-box reveal">
             <span class="mini-label" style="color: rgba(255,255,255,0.72);">Внутренний принцип</span>
-            <p>«Лучшие результаты появляются там, где сотрудники понимают цели, видят смысл задач и чувствуют поддержку команды».</p>
+            <p>«Лучшие результаты появляются там, где сотрудники понимают цели, видят смысл задач и чувствуют поддержку
+              команды».</p>
             <small>MyAwesomeCompany • People first</small>
           </aside>
           <div class="culture-list">
-            <article class="culture-item reveal"><h3>Открытая коммуникация</h3><p>Команда регулярно обменивается идеями, обсуждает трудности и быстро принимает решения на основе обратной связи.</p></article>
-            <article class="culture-item reveal"><h3>Ответственность и самостоятельность</h3><p>Сотрудникам доверяют принимать решения в своей зоне ответственности и предлагают инициативы по развитию продукта.</p></article>
-            <article class="culture-item reveal"><h3>Совместное развитие</h3><p>Внутри компании проходят встречи по обмену опытом, разборы кейсов и демонстрации завершенных проектов.</p></article>
+            <article class="culture-item reveal">
+              <h3>Открытая коммуникация</h3>
+              <p>Команда регулярно обменивается идеями, обсуждает трудности и быстро принимает решения на основе
+                обратной связи.</p>
+            </article>
+            <article class="culture-item reveal">
+              <h3>Ответственность и самостоятельность</h3>
+              <p>Сотрудникам доверяют принимать решения в своей зоне ответственности и предлагают инициативы по развитию
+                продукта.</p>
+            </article>
+            <article class="culture-item reveal">
+              <h3>Совместное развитие</h3>
+              <p>Внутри компании проходят встречи по обмену опытом, разборы кейсов и демонстрации завершенных проектов.
+              </p>
+            </article>
           </div>
         </div>
       </div>
@@ -785,7 +1123,8 @@
       <div class="container">
         <span class="eyebrow reveal">Проекты компании</span>
         <h2 class="section-title reveal">Примеры направлений, над которыми работает команда</h2>
-        <p class="section-subtitle reveal">Галерея помогает сделать страницу более живой и показывает будущему сотруднику, с какими типами задач он может столкнуться.</p>
+        <p class="section-subtitle reveal">Галерея помогает сделать страницу более живой и показывает будущему
+          сотруднику, с какими типами задач он может столкнуться.</p>
         <div class="gallery">
           <article class="gallery-card gallery-a large reveal">
             <div class="gallery-content">
@@ -813,22 +1152,29 @@
       <div class="container">
         <span class="eyebrow reveal">Вакансии</span>
         <h2 class="section-title reveal">Открытые позиции</h2>
-        <p class="section-subtitle reveal">Блок с вакансиями завершает знакомство с компанией и подводит пользователя к отклику через форму обратной связи.</p>
+        <p class="section-subtitle reveal">Блок с вакансиями завершает знакомство с компанией и подводит пользователя к
+          отклику через форму обратной связи.</p>
         <div class="openings">
           <article class="opening-card reveal">
             <h3>Frontend-разработчик</h3>
-            <div class="opening-meta"><span class="pill">Middle</span><span class="pill">Удаленно</span><span class="pill">Full-time</span></div>
-            <p>Разработка интерфейсов, интеграция с API, участие в улучшении пользовательского опыта и поддержка текущих веб-продуктов.</p>
+            <div class="opening-meta"><span class="pill">Middle</span><span class="pill">Удаленно</span><span
+                class="pill">Full-time</span></div>
+            <p>Разработка интерфейсов, интеграция с API, участие в улучшении пользовательского опыта и поддержка текущих
+              веб-продуктов.</p>
           </article>
           <article class="opening-card reveal">
             <h3>HR-специалист</h3>
-            <div class="opening-meta"><span class="pill">Office / Hybrid</span><span class="pill">Recruiting</span><span class="pill">Full-time</span></div>
-            <p>Поиск и сопровождение кандидатов, участие в онбординге, развитие бренда работодателя и внутренних HR-процессов.</p>
+            <div class="opening-meta"><span class="pill">Office / Hybrid</span><span class="pill">Recruiting</span><span
+                class="pill">Full-time</span></div>
+            <p>Поиск и сопровождение кандидатов, участие в онбординге, развитие бренда работодателя и внутренних
+              HR-процессов.</p>
           </article>
           <article class="opening-card reveal">
             <h3>UI/UX-дизайнер</h3>
-            <div class="opening-meta"><span class="pill">Product team</span><span class="pill">Гибрид</span><span class="pill">Portfolio</span></div>
-            <p>Проектирование пользовательских сценариев, создание прототипов и развитие визуальной системы цифровых продуктов.</p>
+            <div class="opening-meta"><span class="pill">Product team</span><span class="pill">Гибрид</span><span
+                class="pill">Portfolio</span></div>
+            <p>Проектирование пользовательских сценариев, создание прототипов и развитие визуальной системы цифровых
+              продуктов.</p>
           </article>
         </div>
       </div>
@@ -838,11 +1184,13 @@
       <div class="container">
         <span class="eyebrow reveal">Обратная связь</span>
         <h2 class="section-title reveal">Оставьте заявку, и команда свяжется с вами</h2>
-        <p class="section-subtitle reveal">Форма завершает HR-портал и дает кандидату возможность сразу откликнуться на вакансию или задать вопрос.</p>
+        <p class="section-subtitle reveal">Форма завершает HR-портал и дает кандидату возможность сразу откликнуться на
+          вакансию или задать вопрос.</p>
         <div class="contact-wrap">
           <aside class="contact-info reveal">
             <h3 style="margin-top:0; font-size:1.4rem;">Контакты HR-команды</h3>
-            <p style="margin:0; color:var(--color-text-muted);">Используйте форму справа, чтобы оставить заявку. Также можно связаться с компанией напрямую по указанным контактам.</p>
+            <p style="margin:0; color:var(--color-text-muted);">Используйте форму справа, чтобы оставить заявку. Также
+              можно связаться с компанией напрямую по указанным контактам.</p>
             <div class="info-list">
               <div class="info-item"><strong>Email</strong><span>hr@myawesomecompany.example</span></div>
               <div class="info-item"><strong>Телефон</strong><span>+7 (900) 123-45-67</span></div>
@@ -851,7 +1199,9 @@
             </div>
           </aside>
           <div class="contact-form reveal">
-            <div class="success-message" id="success-message" role="status" aria-live="polite">Спасибо! Ваша заявка успешно отправлена. Для демонстрации сайта форма работает без сервера и показывает сообщение на странице.</div>
+            <div class="success-message" id="success-message" role="status" aria-live="polite">Спасибо! Ваша заявка
+              успешно отправлена. Для демонстрации сайта форма работает без сервера и показывает сообщение на странице.
+            </div>
             <form id="application-form">
               <div class="field-grid">
                 <label>
@@ -885,9 +1235,12 @@
               </div>
               <label>
                 Сообщение
-                <textarea name="message" placeholder="Расскажите кратко о себе, опыте и почему хотите присоединиться к компании" required></textarea>
+                <textarea name="message"
+                  placeholder="Расскажите кратко о себе, опыте и почему хотите присоединиться к компании"
+                  required></textarea>
               </label>
-              <p class="form-note">Для реального приема заявок форму можно подключить к Netlify Forms, Formspree или собственному backend-сервису.</p>
+              <p class="form-note">Для реального приема заявок форму можно подключить к Netlify Forms, Formspree или
+                собственному backend-сервису.</p>
               <button class="btn btn-primary" type="submit">Отправить заявку</button>
             </form>
           </div>
@@ -899,7 +1252,6 @@
   <footer>
     <div class="container footer-line">
       <span>© 2026 MyAwesomeCompany</span>
-      <span>Одностраничный HR-портал для презентации компании и вакансий</span>
     </div>
   </footer>
 
@@ -955,4 +1307,5 @@
     })();
   </script>
 </body>
+
 </html>
